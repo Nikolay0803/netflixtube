@@ -1,10 +1,11 @@
+export const dynamic = "force-dynamic";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import Billboard from "@/app/components/Billboard";
 import Navbar from "@/app/components/Navbar";
 import React from "react";
 
 const Home = async () => {
-  const currentUser = await getCurrentUser()
+  const currentUser = await getCurrentUser();
 
   return (
     <>
