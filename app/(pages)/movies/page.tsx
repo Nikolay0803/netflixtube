@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import getAllMovies from "@/app/actions/getAllMovies";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import MoviesList from "@/app/components/MoviesList";
