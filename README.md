@@ -20,17 +20,22 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# netflixtube
+“Netflixtube” is a web application created based on the design of the Netflix service. This application allows for the viewing of a large number of movies. Here are some features: the application implements a verification system that allows users to create their own accounts for storing personal settings and movie lists, verification using Google and Github: Users can use their Google or Github accounts to log into the application, providing an additional level of convenience and security, adding movies to favorites: Users can add movies to their favorites, allowing them to easily return to them later. 
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Teclology stack [TS, React, Next.js, Mongodb].
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+SingIn page
+![Main page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/1.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Main page
+![Catalog page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/2.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Favorutes page
+![Favorutes page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/3.png)
+
+Settings page
+![Favorutes page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/4.png)
