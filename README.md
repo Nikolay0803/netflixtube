@@ -27,15 +27,18 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 Teclology stack [TS, React, Next.js, Mongodb].
 
 
-SingIn page
-![Main page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/1.png)
+Hero page
+![Hero page](https://github.com/Nikolay0803/netflixtube/blob/master/app/example-images/netflixtube.png)
+
+SignIn page
+![SignIn page](https://github.com/Nikolay0803/netflixtube/blob/master/app/example-images/SingIn.png)
 
 Main page
-![Catalog page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/2.png)
+![Main page](https://github.com/Nikolay0803/netflixtube/blob/master/app/example-images/Main.png)
 
 
-Favorutes page
-![Favorutes page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/3.png)
+Favorites page
+![Favorutes page](https://github.com/Nikolay0803/netflixtube/blob/master/app/example-images/Favourite.png)
 
-Settings page
-![Favorutes page](https://github.com/darynakarmazin/healthy_hub_project/raw/main/src/images/readmeImg/4.png)
+Catalog
+![Favorutes page](https://github.com/Nikolay0803/netflixtube/blob/master/app/example-images/Films.png)
