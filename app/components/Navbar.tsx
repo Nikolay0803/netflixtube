@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import React from "react";
 import NavbarItem from "./NavbarItem";
+import Logo from "../../public/images/avatar.svg?react"
 
 type NavbarProps = {
   username?: string;
@@ -46,17 +47,11 @@ const Navbar: React.FC<NavbarProps> = ({ username }) => {
             ))}
           </div>
           <div className="flex flex-row ml-auto gap-7 items-center">
-            <div className="flex flex-row items-center">
-              <Image
-                className="w-12 h-12 rounded-full mr-4"
-                width={100}
-                height={100}
-                src="/images/devbro.png"
-                alt="avatar"
-              />
+            <div className="flex gap-2 items-center">
+              <Logo />
               <button
-                className="flex flex-row items-center bg-red-600 py-1 px-4 text-white font-semibold rouded-[4px] hover:bg-red-700 transition"
-                onClick={() => signOut({callbackUrl: '/'})}
+                className="bg-red-600 py-1 px-4 text-white font-semibold rounded-2xl rouded-[4px] hover:bg-red-700 transition"
+                onClick={() => signOut({ callbackUrl: "/" })}
               >
                 Вийти
               </button>
@@ -73,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ username }) => {
             alt="logo"
           />
           <button
-            className="flex flex-row items-center bg-red-600 py-1 px-4 text-white font-semibold rouded-[4px] hover:bg-red-700 transition"
+            className="flex flex-row rounded-2xl items-center bg-red-600 py-1 px-4 text-white font-semibold rouded-[4px] hover:bg-red-700 transition"
             onClick={() => router.push("/auth")}
           >
             Увійти
