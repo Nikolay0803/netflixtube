@@ -3,23 +3,22 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
-
 import BgProvider from "@/app/components/BgProvider";
 import Image from "next/image";
-
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import Input from "@/app/components/Input";
 import axios from "axios";
+import Loader from "@/app/components/Loader"
 
 type VariantType = "login" | "register";
 
 const AuthPage: React.FC = () => {
   const router = useRouter();
   const [variant, setVariant] = useState<VariantType>("login");
-
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleVariantChange = () => {
     setVariant((prevVariant) =>
@@ -28,6 +27,7 @@ const AuthPage: React.FC = () => {
   };
 
   const login = async () => {
+    setLoading(true);
     try {
       await signIn("credentials", {
         email,
@@ -37,10 +37,13 @@ const AuthPage: React.FC = () => {
       });
     } catch (error) {
       console.log("login error", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   const register = async () => {
+    setLoading(true);
     try {
       await axios.post("/api/register", {
         name,
@@ -50,7 +53,9 @@ const AuthPage: React.FC = () => {
 
       login();
     } catch (error) {
-      console.log("login error", error);
+      console.log("register error", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -68,8 +73,10 @@ const AuthPage: React.FC = () => {
       </nav>
       <div className="flex justify-center">
         <div className="bg-black/70 p-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
-          <h2>{variant === "login" ? "Увійти" : "Зареєструватись"}</h2>
-          <div className="flex flex-col gap-4">
+          <h2 className="text-white text-2xl font-bold">
+            {variant === "login" ? "Увійти" : "Зареєструватись"}
+          </h2>
+          <div className="flex flex-col gap-4 mt-4">
             {variant === "register" && (
               <Input
                 id="name"
@@ -102,7 +109,7 @@ const AuthPage: React.FC = () => {
           </div>
           <button
             onClick={variant === "login" ? login : register}
-            className="bg-red-600 rounded-2xl py-3 text-white rouded-md w-full mt-10 hover:bg-red-700 transition"
+            className="bg-red-600 rounded-2xl py-3 text-white w-full mt-10 hover:bg-red-700 transition"
           >
             {variant === "login" ? "Увійти" : "Зареєструватись"}
           </button>
@@ -132,6 +139,7 @@ const AuthPage: React.FC = () => {
           </p>
         </div>
       </div>
+      {loading && <Loader />}
     </BgProvider>
   );
 };

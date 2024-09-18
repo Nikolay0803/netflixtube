@@ -12,6 +12,7 @@ export const authOptions: AuthOptions = {
     GithubProvider({
       clientId: process.env.NEXT_AUTH_GITHUB_CLIENT_ID as string,
       clientSecret: process.env.NEXT_AUTH_GITHUB_CLIENT_SECRET as string,
+      authorization: { params: { prompt: "login" } },
     }),
     GoogleProvider({
       clientId: process.env.NEXT_AUTH_GOOGLE_CLIENT_ID as string,
